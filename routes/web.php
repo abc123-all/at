@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CrudUserController;
 
 /*
@@ -33,6 +34,26 @@ Route::get('list', [CrudUserController::class, 'listUser'])->name('user.list');
 
 Route::get('signout', [CrudUserController::class, 'signOut'])->name('signout');
 
+// Giao diện exe
+Route::get('loginE', [CrudUserController::class, 'loginE'])->name('loginE');
+// Route::post('loginE', [CrudUserController::class, 'authUserEXE'])->name('exe.login');
+
+Route::get('indexE', [CrudUserController::class, 'indexE'])->name('indexE');
+
+Route::get('listE', [CrudUserController::class, 'listE'])->name('listE');
+
+
+Route::get('logoutE', [CrudUserController::class, 'logoutE'])->name('logoutE');
+
+Route::get('registerE', [CrudUserController::class, 'registerE'])->name('registerE');
+
+Route::get('updateE', [CrudUserController::class, 'updateE'])->name('updateE');
+
+Route::get('viewE', [CrudUserController::class, 'viewE'])->name('viewE');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
+

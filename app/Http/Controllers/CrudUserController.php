@@ -148,4 +148,44 @@ class CrudUserController extends Controller
 
         return Redirect('login');
     }
+
+
+    // // Giao diện exe1
+    public function loginE()
+    {
+        return view('layoutEXE.login');
+    }
+
+
+    public function indexE()
+    {
+        return view('layoutEXE.index');
+    }
+
+    public function listE()
+    {
+        return view('layoutEXE.list');
+    }
+
+
+    public function logoutE()
+    {
+        return view('layoutEXE.logout');
+    }
+
+    public function registerE()
+    {
+        return view('layoutEXE.register');
+    }
+
+    public function updateE()
+    {
+        return view('layoutEXE.update');
+    }
+
+    public function viewE()
+    {
+        return view('layoutEXE.view');
+    }
+
 }
